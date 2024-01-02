@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/insumos")
-public class InsumoController {
+public class InsumoMVCController {
 
     @GetMapping("/cadastro")
     public String carregarFormularioDeCadastro() {
