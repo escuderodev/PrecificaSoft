@@ -17,6 +17,8 @@ public class Insumo {
     private Long id;
     private String descricao;
     private Integer tamanhoEmbalagem;
+    @Enumerated(EnumType.STRING)
+    private UnidadeMedida unidadeMedida;
     private BigDecimal valorEmbalagem;
     private BigDecimal valorUnitario;
     private String fornecedor;
@@ -24,6 +26,7 @@ public class Insumo {
     public Insumo(DadosCadastroInsumo dados) {
         this.descricao = dados.descricao();
         this.tamanhoEmbalagem = dados.tamanhoEmbalagem();
+        this.unidadeMedida = dados.unidadeMedida();
         this.valorEmbalagem = dados.valorEmbalagem();
         this.valorUnitario = valorEmbalagem.divide(BigDecimal.valueOf(tamanhoEmbalagem));
         this.fornecedor = dados.fornecedor();
@@ -36,6 +39,7 @@ public class Insumo {
     public void atualizaDados(DadosAtualizaInsumo dados) {
         this.descricao = dados.descricao();
         this.tamanhoEmbalagem = dados.tamanhoEmbalagem();
+        this.unidadeMedida = dados.unidadeMedida();
         this.valorEmbalagem = dados.valorEmbalagem();
         this.valorUnitario = valorEmbalagem.divide(BigDecimal.valueOf(tamanhoEmbalagem));
         this.fornecedor = dados.fornecedor();

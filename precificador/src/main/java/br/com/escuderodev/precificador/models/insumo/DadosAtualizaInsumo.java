@@ -14,6 +14,8 @@ public record DadosAtualizaInsumo(
         Integer tamanhoEmbalagem,
         @NotNull
         BigDecimal valorEmbalagem,
+        @NotNull
+        UnidadeMedida unidadeMedida,
         @NotBlank
         String fornecedor
 ) {

@@ -12,6 +12,8 @@ public record DadosCadastroInsumo(
         Integer tamanhoEmbalagem,
         @NotNull
         BigDecimal valorEmbalagem,
+        @NotNull
+        UnidadeMedida unidadeMedida,
         @NotBlank
         String fornecedor
 ) {
