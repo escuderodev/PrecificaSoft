@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://thymeleaf.org">
+<head th:replace="~{template :: head}"></head>
+<body>
+  <header class="header">
+    <div>
+      <nav th:replace="~{template :: nav}"></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="mt-3">Insumos Cadastrados</h1>
+    <button type="button" class="btn btn-primary mt-3"><a href="/insumos/formulario" class="text-decoration-none text-light">Novo Insumo</a></button>
+    <table class="table mt-3 table-striped text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Id</th>
+          <th>Descrição</th>
+          <th>Qtd Embalagem</th>
+          <th>Unidade de Medida</th>
+          <th>R$ Embalagem</th>
+          <th>R$ Unitário</th>
+          <th>Fornecedor</th>
+          <th>Editar</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr th:each="insumo : ${insumos}">
+        <td th:text = "${insumo.id}"></td>
+        <td class="text-center" th:text = "${insumo.descricao}"></td>
+        <td th:text = "${insumo.tamanhoEmbalagem}"></td>
+        <td th:text = "${insumo.unidadeMedida}"></td>
+        <td th:text = "${#numbers.formatDecimal(insumo.valorEmbalagem,1,'POINT',2,'COMMA')}"></td>
+        <td th:text = "${#numbers.formatDecimal(insumo.valorUnitario,1,'POINT',2,'COMMA')}"></td>
+        <td th:text = "${insumo.fornecedor}"></td>
+        <td>
+          <div>
+            <button class="border-0"><a th:href="@{/insumos/formulario?id={id}(id=${insumo.id})}" id="editar" class="btn btn-warning">Editar</a></button>
+          </div>
+        </td>
+        <td>
+          <div>
+            <form action="/insumos" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="id" th:value="${insumo.id}">
+              <button type="submit" id="btn_excluir" class="btn btn-danger border-0">Excluir</button>
+            </form>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

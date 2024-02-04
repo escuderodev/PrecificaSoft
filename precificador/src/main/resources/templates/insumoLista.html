@@ -19,8 +19,7 @@
                     <th scope="col">R$ Embalagem</th>
                     <th scope="col">R$ Unitário</th>
                     <th scope="col">Fornecedor</th>
-                    <th></th>
-                    <th></th>
+                    <th colspan="2">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,16 +31,14 @@
                     <td th:text = "${#numbers.formatDecimal(insumo.valorEmbalagem,1,'POINT',2,'COMMA')}"></td>
                     <td th:text = "${#numbers.formatDecimal(insumo.valorUnitario,1,'POINT',2,'COMMA')}"></td>
                     <td th:text = "${insumo.fornecedor}"></td>
+                    <td><a th:href="@{/insumos/cadastro?id={id}(id=${insumo.id})}" id="editar" class="btn btn-warning">Editar</a></td>
                     <td>
-                        <a class="btn btn-warning btn-sm">Editar</a>
+                        <form action="/insumos/cadastro" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="hidden" name="id" th:value="${insumo.id}">
+                            <button type="submit"><a class="btn btn-danger">Excluir</a></button>
+                        </form>
                     </td>
-                    <td>
-                        <a class="btn btn-danger btn-sm">Excluir</a>
-                    </td>
-<!--                    <td>-->
-<!--                        <a class="btn btn-danger btn-sm" th:href="@{/insumos/detalhes}">Detalhes</a>-->
-<!--                    </td>-->
-<!--                    para detalhes, ver vídeo https://www.youtube.com/watch?v=NI0np0cRwro&t=1444s&ab_channel=gabeporto-->
                 </tr>
             </tbody>
         </table>
