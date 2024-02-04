@@ -1,4 +1,4 @@
-package br.com.escuderodev.vendas.controller.exception;
+package br.com.escuderodev.precifica.controller.exception;
 public class NotFoundExceptionController extends RuntimeException{
 
     public NotFoundExceptionController(String message) {

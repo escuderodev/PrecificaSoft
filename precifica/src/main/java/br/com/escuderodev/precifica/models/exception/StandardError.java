@@ -1,4 +1,4 @@
-package br.com.escuderodev.vendas.models.exception;
+package br.com.escuderodev.precifica.models.exception;
 
 import lombok.Getter;
 import lombok.Setter;

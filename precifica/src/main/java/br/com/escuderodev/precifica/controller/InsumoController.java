@@ -1,8 +1,8 @@
-package br.com.escuderodev.vendas.controller;
+package br.com.escuderodev.precifica.controller;
 
-import br.com.escuderodev.vendas.models.insumo.DadosAtualizaInsumo;
-import br.com.escuderodev.vendas.models.insumo.DadosCadastroInsumo;
-import br.com.escuderodev.vendas.service.InsumoService;
+import br.com.escuderodev.precifica.models.insumo.DadosAtualizaInsumo;
+import br.com.escuderodev.precifica.models.insumo.DadosCadastroInsumo;
+import br.com.escuderodev.precifica.service.InsumoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;

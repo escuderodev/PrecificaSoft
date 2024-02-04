@@ -1,6 +1,6 @@
-package br.com.escuderodev.vendas.controller.exception;
+package br.com.escuderodev.precifica.controller.exception;
 
-import br.com.escuderodev.vendas.models.exception.StandardError;
+import br.com.escuderodev.precifica.models.exception.StandardError;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

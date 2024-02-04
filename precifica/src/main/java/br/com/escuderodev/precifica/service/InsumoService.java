@@ -1,7 +1,7 @@
-package br.com.escuderodev.vendas.service;
+package br.com.escuderodev.precifica.service;
 
-import br.com.escuderodev.vendas.controller.exception.NotFoundExceptionController;
-import br.com.escuderodev.vendas.models.insumo.*;
+import br.com.escuderodev.precifica.controller.exception.NotFoundExceptionController;
+import br.com.escuderodev.precifica.models.insumo.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;

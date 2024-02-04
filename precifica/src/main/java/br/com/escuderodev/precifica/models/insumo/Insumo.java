@@ -1,4 +1,4 @@
-package br.com.escuderodev.vendas.models.insumo;
+package br.com.escuderodev.precifica.models.insumo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

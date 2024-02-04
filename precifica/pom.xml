@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.escuderodev</groupId>
-	<artifactId>vendas</artifactId>
+	<artifactId>precifica</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>vendas</name>
-	<description>Controle de Vendas</description>
+	<name>precifica</name>
+	<description>Sistema de precificação</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -56,15 +56,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-client</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
