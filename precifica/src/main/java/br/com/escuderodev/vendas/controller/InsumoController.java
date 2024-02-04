@@ -51,5 +51,4 @@ public class InsumoController {
         service.delete(id);
         return"redirect:/insumos/lista";
     }
-
 }
